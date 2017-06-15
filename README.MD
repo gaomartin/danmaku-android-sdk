@@ -204,6 +204,29 @@ public void onPause(Context context)
 
 这里, onPause和onResume中不控制弹幕的暂停与开始, 因此需要手动调用 ```resume``` 和 ```pause``` 方法进行控制
 
+### 3.8 弹幕不覆盖和弹幕半屏/全屏显示
+由于个别视频弹幕很多, 因此需要使用弹幕防覆盖的功能时, 调用```DanmakuView```的:
+
+```JAVA
+/**
+* 设置弹幕不被覆盖
+* @param dontCover
+*/
+public void setDontCover(boolean dontCover)
+```
+
+半屏弹幕显示, 调用:
+
+```JAVA
+/**
+* 是否只展示半屏字幕
+* @param half
+*/
+public void setHalfView(boolean half) 
+```
+
+__ 注意: 半屏弹幕指的是从右向左飘动的弹幕只显示在屏幕的上半部分, 固定在视频上部和下部的弹幕不受影响 __
+
 ## 4. 弹幕网络接口文档:
 
 [http://sharepoint/tech/clouddivision/_layouts/15/WopiFrame2.aspx?sourcedoc=/tech/clouddivision/Shared%20Documents/%E9%95%BF%E8%BF%9E%E6%8E%A5%E4%BB%A5%E5%8F%8A%E5%BC%B9%E5%B9%95%E6%A2%B3%E7%90%86/%E5%BC%B9%E5%B9%951.0%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.docx&action=default](http://sharepoint/tech/clouddivision/_layouts/15/WopiFrame2.aspx?sourcedoc=/tech/clouddivision/Shared%20Documents/%E9%95%BF%E8%BF%9E%E6%8E%A5%E4%BB%A5%E5%8F%8A%E5%BC%B9%E5%B9%95%E6%A2%B3%E7%90%86/%E5%BC%B9%E5%B9%951.0%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.docx&action=default)
