@@ -39,6 +39,7 @@ DanmakuInitializer.begin(this, DanmakuSDK.Platform.Phone, "5.0.0")
 ```
 compile(name: 'pppush-sdk-v1.0.2', ext: 'aar')
 compile(name: 'danmaku-1.0', ext: 'aar')
+compile 'com.alibaba:fastjson:1.2.15'
 ```
 
 ## 2. 调用方法
